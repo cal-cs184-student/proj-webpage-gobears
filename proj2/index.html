@@ -120,7 +120,7 @@
 
 <h3> Part 5: Edge Split </h3>
 
-<p> For edge splitting, we want to insert a new vertex at the midpoint of the given edge, subsequently also creating two new faces, three new edges, and thus six new halfedges. For splitting, if our given edge is a boundary, we can simply return the vertex of the halfedge of the input edge. Otherwise, the following diagram illustrates how I implemented edge splitting: </p>
+<p> For edge splitting, we want to insert a new vertex at the midpoint of the given edge, subsequently also creating two new faces, three new edges, and thus six new halfedges. For splitting, if our given edge is a boundary, I can simply return immediately and ignore the request to split this edge. Otherwise, the following diagram illustrates how I implemented edge splitting: </p>
 
 <img src="split_diagram.png" height=350, class="center">
 
