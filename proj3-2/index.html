@@ -94,7 +94,7 @@
     <p> alpha = 0.5 </p>
   </div>
 </div>
-<p> The alpha value corresponds to the roughness of the material, so as we increase the alpha value, the surface of the dragon becomes more smooth.</p>
+<p> The alpha value corresponds to the roughness of the material. As we increase the alpha value, the surface of the dragon becomes more rough whereas a small alpha value creates a shinier and smoother dragon.</p>
 
 <h4> Importance Sampling vs default Cosine Hemisphere Sampling: </h4>
 <div class="row">
@@ -107,7 +107,7 @@
     <p> Cosine Hemisphere Sampling </p>
   </div>
 </div>
-<p> As the images show, using cosine hemisphere sampling produces a lot of black spots and regions, since cosine hemisphere sampling converges a lot slower compared to importance sampling. </p>
+<p> As the images show, using cosine hemisphere sampling produces a lot of black spots and regions, since cosine hemisphere sampling converges a lot slower compared to importance sampling. In comparison, with the same settings, importance sampling is able to produce a more finished image within a similar amount of time. </p>
 
 <h4> Here are some renders with different conductor materials: </h4>
 <div class="row">
@@ -116,8 +116,8 @@
     <p> Pure Silver </p>
   </div>
   <div class="column2">
-    <img src="part1/bunny_ag_smooth.png" height=300>
-    <p> Pure Silver (Smooth) </p>
+    <img src="part1/bunny_ag_rough.png" height=300>
+    <p> Pure Silver (Rough) </p>
   </div>
 </div>
 <div class="row">
@@ -126,8 +126,8 @@
     <p> Iron </p>
   </div>
   <div class="column2">
-    <img src="part1/bunny_fe_smooth.png" height=300>
-    <p> Iron (Smooth) </p>
+    <img src="part1/bunny_fe_rough.png" height=300>
+    <p> Iron (Rough) </p>
   </div>
 </div>
 <p> For Silver (in RGB order): eta: 0.059193 0.059881 0.047366 and k: 4.1283 3.5892 2.8132</p>
@@ -144,7 +144,7 @@
 <img src="t.png" height=75>
 <p> where p' is a point on the plane of focus (any point will do and we know that z=-focalDistance!) and N is the normal of the plane. The origin is the camera origin (red ray origin) and direction is the red ray direction, which we calculated in generate_ray. Then we can find the intersection location by plugging t back into r(t) = o + td and the direction (pFocus) can be calculated as the difference between this point and pLens. We can use pLens and pFocus (converted to world space) to create the ray we want to return. </p>
 
-<p> Compared to a pin-hole camera where everything is in focus, a thin lens camera only focus on things at the focal distance. By changing the focal distance and aperture we can change the focus of the image we render. </p>
+<p> Compared to a pin-hole camera where everything is in focus, a thin lens camera only focus on things at the focal distance. By changing the focal distance and aperture we can change the focus of the image we render. The thin lens model is more accurate to how real cameras and the human eyes work, as they don't have everything in focus like the pin-hole camera does. </p>
 
 
 <h4> Below are some images rendered at different "focus stacks": </h4>
